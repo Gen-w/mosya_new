@@ -1,0 +1,154 @@
+/* 全体のデフォルト設定 */
+body {
+    color: #000000; /* 文字色: 黒色 */
+    background-color: #ffffff; /* 背景色: 白色 */
+    font-family: 'Noto Sans JP', sans-serif; /* Webフォント: Noto Sans JP */
+    font-size: 18px; /* 文章・コピーライトの文字サイズ: 18px */
+}
+
+/* ヘッダーのスタイル設定 */
+nav {
+    display: flex; /* フレックスボックスを使用 */
+    flex-wrap: wrap; /* 子要素がコンテナを超えたら折り返す */
+    justify-content: space-between; /* 子要素を左右の間に均等に配置 */
+    margin: 20px auto 20px auto; /* 上下の余白: 20px, 左右の余白: 自動 */
+    max-width: 960px; /* 最大幅: 960px */
+}
+
+nav a {
+    font-weight: bold; /* 文字を太字に */
+    text-decoration: none; /* 下線なし */
+    font-size: 34px; /* 文字サイズ: 34px */
+    color: black; /* 文字色: 黒 */
+    font-family: "Noto Sans JP", sans-serif; /* フォントファミリー: Noto Sans JP */
+    margin: 0 10px; /* 左右の余白: 10px */
+}
+
+nav .home {
+    border: 1px solid black;
+    padding: 0px 20px;
+    margin-left: 20px;
+}
+
+
+
+/* メインビジュアルのスタイル */
+.main-image img {
+    width: 100%; /* 幅: 100% */
+    height: 400px; /* 高さ: 400px */
+}
+
+img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Aboutの見出し */
+#about {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 34px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+
+/* Aboutセクションの全体スタイル */
+.about {
+    padding: 10px;
+    display: flex; /* フレックスボックスを使用 */
+    flex-wrap: wrap; /* 必要に応じて折り返し */
+    align-items: center; /* 子要素を垂直方向の中央に配置 */
+    margin: 20px auto; /* 上下の余白: 20px, 左右の余白: 自動 */
+    max-width: 960px; /* 最大幅: 960px */
+}
+
+/* 画像スタイル */
+.circle {
+    border-radius: 50%; /* 丸みを持たせるためのボーダーレディウス */
+    width: 280px;
+    height: 280px;
+    object-fit: cover; /* 画像のアスペクト比を維持しつつ、コンテナに合わせる */
+    border: 3px solid #999; /* 枠線 */
+    padding: 3px;
+}
+
+/* テキスト内容のスタイル */
+.content {
+    margin: 0 auto;
+    padding-left: 40px; /* 左の余白 */
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Worksの見出し */
+#works {
+    text-align: center; /* テキストを中央寄せに */
+    font-size: 34px; /* 文字サイズ: 34px */
+    font-family: "Noto Sans JP", sans-serif; /* フォントファミリー: Noto Sans JP */
+    padding-top: 60px; /* 上の余白 */
+    padding-bottom: 40px; /* 下の余白 */
+}
+
+/* Worksセクションの全体スタイル */
+.works {
+    display: flex; /* フレックスボックスを使用 */
+    flex-wrap: wrap; /* 必要に応じて折り返し */
+    justify-content: center; /* 子要素を水平方向の中央に配置 */
+    margin: 20px auto 20px auto; /* 上下の余白: 20px, 左右の余白: 自動 */
+    max-width: 960px; /* 最大幅: 960px */
+}
+
+/* 各作品アイテムのスタイル */
+.item {
+    padding-bottom: 60px; /* 下の余白: 60px */
+    width: 25%; /* 幅: 25% */
+}
+
+/* 中央の作品アイテムに追加するスタイル */
+.item_center {
+    padding-right: 20px; /* 右の余白: 20px */
+    padding-left: 20px; /* 左の余白: 20px */
+}
+
+/* Worksの画像のスタイル調整 */
+.item img {
+    width: 100%; /* 幅を親要素に合わせる */
+    height: auto; /* 高さは自動 */
+    display: block; /* ブロック要素として表示 */
+}
+
+/* フッターのスタイル */
+footer {
+    text-align: center; /* 中央寄せ */
+    padding: 20px ; /* 上下20pxのパディング */
+}
+
+/* スマートフォン用のレスポンシブデザイン */
+@media (max-width: 767px) {
+    /* 縦に並べる設定 */
+    .works {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* アイテムの幅を100%にして縦に並べる */
+    .item {
+        width: 100%;
+    }
+    /* 中央のアイテムの余白設定を削除 */
+    .item.item_center {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    body {
+        margin: 0 auto; /* 中央寄せ */
+        max-width: 1200px; /* 最大幅を1200pxに */
+    }
+}
